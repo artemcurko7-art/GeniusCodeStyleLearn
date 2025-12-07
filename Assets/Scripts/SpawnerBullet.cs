@@ -45,6 +45,8 @@ public class SpawnerBullet : MonoBehaviour
 
     private IEnumerator Shoot()
     {
+        var wait = new WaitForSeconds(_timeShooting);
+        
         while (enabled)
         {
             var direction = (_target.position - transform.position).normalized;
@@ -52,7 +54,7 @@ public class SpawnerBullet : MonoBehaviour
 
             bullet.Rigidbody.linearVelocity = direction * _speed;
 
-            yield return new WaitForSeconds(_timeShooting);
+            yield return wait;
         }
     }
 }
