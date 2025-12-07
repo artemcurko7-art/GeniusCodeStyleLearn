@@ -871,7 +871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34af8bfc8f7277429876fca8f1e8d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GoPlaces
-  _point: {fileID: 1903733540}
+  _targetPoint: {fileID: 1903733540}
   _speed: 3
 --- !u!1 &1423643359
 GameObject:
@@ -904,7 +904,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InstantiateBulletsShooting
   _bullet: {fileID: 8715249865216118080, guid: cca664ead7c13ca4f94320366fe789ed, type: 3}
   _target: {fileID: 83430275}
-  _speed: 20
   _timeShooting: 1
 --- !u!4 &1423643362
 Transform:
