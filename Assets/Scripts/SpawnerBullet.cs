@@ -7,7 +7,7 @@ public class SpawnerBullet : MonoBehaviour
     [SerializeField] private Bullet _bullet;
     [SerializeField] private Transform _target;
     [SerializeField] private float _speed;
-    [SerializeField] float _timeShooting;
+    [SerializeField] private float _timeShooting;
 
     private ObjectPool<Bullet> _pool;
 
@@ -45,6 +45,8 @@ public class SpawnerBullet : MonoBehaviour
 
     private IEnumerator Shoot()
     {
+        var wait = new WaitForSeconds(_timeShooting);
+
         while (enabled)
         {
             var direction = (_target.position - transform.position).normalized;
@@ -52,7 +54,7 @@ public class SpawnerBullet : MonoBehaviour
 
             bullet.Rigidbody.linearVelocity = direction * _speed;
 
-            yield return new WaitForSeconds(_timeShooting);
+            yield return wait;
         }
     }
 }

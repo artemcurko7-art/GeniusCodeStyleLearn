@@ -15,10 +15,10 @@ public class ÑonsistentPath : MonoBehaviour
 
     private void Update()
     {
-        Movement();
+        Move();
     }
 
-    private void Movement()
+    private void Move()
     {
         if (transform.position == _direction)
             _direction = GetDirection();
