@@ -46,11 +46,7 @@ public class SpawnerBullet : MonoBehaviour
     private IEnumerator Shoot()
     {
         var wait = new WaitForSeconds(_timeShooting);
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 7e80fe5f4383c00ab753096841303abffe80eab5
         while (enabled)
         {
             var direction = (_target.position - transform.position).normalized;
